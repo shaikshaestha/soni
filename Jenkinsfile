@@ -6,7 +6,7 @@ pipeline {
                 sh'''
                 pwd
                 rm -rf *
-                git clone https://github.com/shaikshaestha/soni.git"
+                git clone https://github.com/shaikshaestha/soni.git
                 '''
             }
         }

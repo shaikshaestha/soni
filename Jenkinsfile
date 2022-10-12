@@ -6,14 +6,14 @@ pipeline {
                 sh'''
                 pwd
                 rm -rf *
-                git clone "https://github.com/banawathbalajinaik/mavenproject_6.git"
+                git clone https://github.com/shaikshaestha/soni.git
                 '''
             }
         }
         stage('clean') {
             steps {
                 sh'''
-                cd mavenproject_6
+                cd soni
                 mvn clean
                 '''
             }
@@ -21,7 +21,7 @@ pipeline {
         stage('compile') { 
             steps {
                 sh'''
-                cd mavenproject_6
+                cd soni
                 mvn compile
                 '''
             }
@@ -29,7 +29,7 @@ pipeline {
         stage('test') { 
             steps {
                 sh'''
-                cd mavenproject_6
+                cd soni
                 mvn test
                 '''
             }
@@ -37,7 +37,7 @@ pipeline {
         stage('sonarqube test') { 
             steps {
                 sh'''
-                cd mavenproject_6
+                cd soni
                 mvn sonar:sonar
                 '''
             }
